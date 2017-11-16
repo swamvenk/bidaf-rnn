@@ -1,7 +1,7 @@
 # Bi-directional Attention Flow for Comprehension Q&A
 
 - This the original implementation of [Bi-directional Attention Flow for Machine Comprehension][paper] (Seo et al., 2016).
-- This github page is adapted from [AllenAi][https://github.com/allenai]
+- This github page is adapted from [AllenAi][allenai]
 - This is tensorflow v1.1.0 comaptible version. This is not compatible with previous trained models.
 
 ## Requirements
@@ -26,10 +26,9 @@ There is a file called `check_tensorflow.py` which checks if tensorflow is insta
 The execution steps are consolidated into two shell scripts `train.sh` and `predict.sh`. The individual steps are elaborated below.
 
 ### 1. Pre-processing
-First, prepare data.
-Please place the `train.json` and  `test.json` in `data/squad` directory
-For GloVe and nltk (tokenizer) corpus `train.sh` will download GloVe files to `data/glove` and and nltk in `$HOME/nltk_data` before starting the training
+Please place the `train.json` and  `test.json` in `data/squad` directory.
 
+For GloVe and nltk (tokenizer) corpus `train.sh` will download GloVe files to `data/glove` and and nltk in `$HOME/nltk_data` before starting the training.
 
 Preprocess dataset (along with GloVe vectors) and save them in `$PWD/data/squad` (~5 minutes). `train.sh` does this using the following command:
 ```
@@ -79,6 +78,7 @@ python -m basic.cli --num_gpus 3 --batch_size 20
 
 
 [multi-gpu]: https://www.tensorflow.org/versions/r0.11/tutorials/deep_cnn/index.html#training-a-model-using-multiple-gpu-cards
+[allenai]: https://github.com/allenai/bi-att-flow
 [squad]: http://stanford-qa.com
 [paper]: https://arxiv.org/abs/1611.01603
 [worksheet]: https://worksheets.codalab.org/worksheets/0x37a9b8c44f6845c28866267ef941c89d/
