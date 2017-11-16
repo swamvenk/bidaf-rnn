@@ -5,12 +5,16 @@
 - This is tensorflow v1.1.0 comaptible version. This is not compatible with previous trained models.
 
 ## Requirements
+
+Please setup a vitrualenv with the packages so that they don't affect any other systems packages.
+
 #### General
 - Python (developed on 3.5.2. Issues are there with Python 2!)
 - unzip
 
 #### Python Packages
 - tensorflow (deep learning library, verified on 1.1.0)
+  - Please ensure the compatible CUDA and cuDNN libraries installed. Tested and verified with CUDA 7.5 and cuDNN 5.1
 - nltk (NLP tools, verified on 3.2.1)
 - tqdm (progress bar, verified on 4.7.4)
 - jinja2 (for visaulization; if you only train and test, not needed)
